@@ -7,7 +7,7 @@
     "esModuleInterop": true,
     "target": "esnext",
     "strict": false,
-    "outDir": "app",
+    "outDir": "index",
     "declaration": true,
     "sourceMap": true,
     "skipLibCheck": false,  

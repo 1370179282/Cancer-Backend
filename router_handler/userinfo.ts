@@ -24,6 +24,8 @@ export const getuserinfo = (req, res) => {
   });
 };
 
+
+//用户默认模型改变
 export const changeDefuatModel = (req, res) => {
   db.query(
     "update ev_users set model_id=? where id = ? ",

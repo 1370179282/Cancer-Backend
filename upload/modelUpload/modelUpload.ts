@@ -24,7 +24,7 @@ var storage = multer.diskStorage({
     // // console.log(file, "file");
     // let fileName = Date.now();
     // req.myURL = fileName + extName;
-    if (req.myFilelist?.[0]) {
+    if (req.myFilelist[0]) {
       req.myFilelist.push(file.originalname);
     } else {
       req.myFilelist = [file.originalname];
