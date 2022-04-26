@@ -38,10 +38,6 @@ app.use(
   })
 );
 
-// app.use("/static", express.static("upload/upload")); //静态资源目录
-app.use("/static", express.static("db/models"));
-app.use("/static1", express.static("upload/imageUpload"));
-
 // app.use(koaBody({ multipart: true }));
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -86,6 +82,10 @@ app.use((err, req, res, next) => {
   if (err.name === "UnauthorizedError") return res.cc("身份认证失败!");
   res.cc(err);
 });
+
+// app.use("/static", express.static("upload/upload")); //静态资源目录
+app.use("/static", express.static("db/models"));
+app.use("/static1", express.static("upload/imageUpload"));
 
 app.listen(3007, function () {
   console.log("api server running at http://127.0.0.1:3007");
