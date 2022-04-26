@@ -16,7 +16,7 @@ var storage = multer.diskStorage({
   //设置 上传图片服务器位置
   destination: path.resolve(__dirname, "../../db/models"),
   //设置 上传文件保存的文件名
-  filename: function (req, file, cb) {
+  filename: function (req: any, file, cb) {
     // 获取后缀扩展
     // let extName = file.originalname.slice(file.originalname.lastIndexOf(".")); //.jpg
     // // 获取名称
@@ -33,7 +33,7 @@ var storage = multer.diskStorage({
   },
 });
 
-var limits = {
+var limits: any = {
   fileSize: "200MB", //设置限制（可选）
 };
 
@@ -41,4 +41,4 @@ export const modelUploader = multer({
   fileFilter,
   storage,
   limits,
-}).any("file");
+}).any();
