@@ -1,0 +1,17 @@
+{
+  "include": ["src", "demo"],
+  "compilerOptions": {
+    //"module": "commonjs",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "target": "esnext",
+    "strict": false,
+    "outDir": "app",
+    "declaration": true,
+    "sourceMap": true,
+    "skipLibCheck": false,  
+    "allowJs" :true, 
+    "noUnusedParameters":false,
+  }
+}
